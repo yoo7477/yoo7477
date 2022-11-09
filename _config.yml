@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR"
+locale                   : "en-US"
 title                    : "yoo7477_blog"
 title_separator          : "|"
 subtitle                 : "good"
@@ -106,16 +106,16 @@ analytics:
 author:
   name             : "유 정 민 "
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "공부하자"
+  bio              : "공부하자!"
   location         : "South Korea"
-  email            :
+  email            : "opqrstu12362@gmail.com"
   links:
-    - label: "Email"
+    - label: "opqrstu12362@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:opqrstu12362@gmail.com"
+      # url: "mailto:opqrstu12362@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://yoo7477.github.io"
+      # url: "https://yoo7477.github.io"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -218,9 +218,9 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 30 # amount of posts to show
+paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone:
+timezone: # Asia/Seoul
 
 
 # Plugins (previously gems:)
@@ -286,10 +286,25 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
-      comments:  true
+      read_time: false   # 블로그를 읽는데 소요시간 표시
+      show_date: true    # 포스팅 날짜 표시
+      comments: true # 블로그 댓글 기능 true
       share: true
       related: true
-      show_date: true
+      sidebar_main: true
+
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: false   # 블로그를 읽는데 소요시간 표시
+      show_date: true    # 포스팅 날짜 표시
+      comments: false
+      share: true
+      related: false
+      sidebar_main: true
 
 date_format: "%Y-%m-%d"
