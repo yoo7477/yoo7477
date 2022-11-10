@@ -1,0 +1,46 @@
+<!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <!--전체 글 수-->
+      <li>
+            📂 <span style="font-family:'Cafe24Oneprettynight';">전체 글 수</style> <span style="font-family:'Coming Soon';">{{sum}}</style> <span style="font-family:'Cafe24Oneprettynight';">개</style>
+      </li>
+      <li>
+        <!-- span 태그: 큰 카테고리 -->
+        <!-- 파이썬 카테고리 -->
+        <span class="nav__sub-title">Python</span>
+            <!-- ul 태그: 서브 카테고리 -->
+            <ul>
+                <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+                <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시-->
+                {% for category in site.categories %}
+                    {% if category[0] == "ML" %}
+                        <li><a href="/categories/ML" class="">ML 알고리즘 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <!-- SQL 카테고리 -->
+        <span class="nav__sub-title">SQL</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "SQL" %}
+                        <li><a href="/categories/SQL" class="">초보자를 위한 SQL ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+        <!-- Favorite 카테고리 -->
+        <span class="nav__sub-title">FAVORITE</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "FAVORITE" %}
+                        <li><a href="/categories/FAVORITE" class="">일상 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
+  </ul>
+</nav>

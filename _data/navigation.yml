@@ -7,26 +7,19 @@ main:
   - title: "Search"
     url: /search/
 
-docs:
-  - title: "Python"
+sidebar-category:
+  - title: "PYTHON"
     children:
-      - title: "Categories"
-        url: /categories/
-      - title : "Tags"
-        url: /tags/
-
+      - title: "ML"
+        url: "/MLguide"
+        category: "ML"
   - title: "SQL"
     children:
-      - title: "Categories"
-        url: /categories/
-      - title : "Tags"
-        url: /tags/
-
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+      - title: "sql"
+        url: "/sqlguide"
+        category: "SQL"
+  - title: "FAVORITE"
+    children:
+      - title: "Daily life"
+        url: "/Daily"
+        category: "Daily"

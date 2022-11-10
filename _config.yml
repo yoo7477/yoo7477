@@ -257,16 +257,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+   enabled:
+     - categories
+     - tags
+   layouts:
+     category: archive-taxonomy
+     tag: archive-taxonomy
+   permalinks:
+     category: /categories/:name/
+     tag: /tags/:name/
 
 
 # HTML Compression
@@ -291,20 +291,7 @@ defaults:
       comments: true # 블로그 댓글 기능 true
       share: true
       related: true
-      sidebar_main: true
-
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-      read_time: false   # 블로그를 읽는데 소요시간 표시
-      show_date: true    # 포스팅 날짜 표시
-      comments: false
-      share: true
-      related: false
-      sidebar_main: true
+      sidebar:
+          nav: "sidebar-category"
 
 date_format: "%Y-%m-%d"
