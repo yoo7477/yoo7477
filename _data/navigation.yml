@@ -6,20 +6,3 @@ main:
     url: /tags/
   - title: "Search"
     url: /search/
-
-sidebar-category:
-  - title: "PYTHON"
-    children:
-      - title: "ML"
-        url: "/MLguide"
-        category: "ML"
-  - title: "SQL"
-    children:
-      - title: "sql"
-        url: "/sqlguide"
-        category: "SQL"
-  - title: "FAVORITE"
-    children:
-      - title: "Daily life"
-        url: "/Daily"
-        category: "Daily"

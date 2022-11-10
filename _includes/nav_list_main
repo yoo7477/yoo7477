@@ -20,7 +20,7 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시-->
                 {% for category in site.categories %}
                     {% if category[0] == "ML" %}
-                        <li><a href="/categories/ML" class="">ML ({{category[1].size}})</a></li>
+                        <li><a href="/categories/ML" class=""> ML ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -29,15 +29,15 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "SQL" %}
-                        <li><a href="/categories/SQL" class="">초보자를 위한 SQL ({{category[1].size}})</a></li>
+                        <li><a href="/categories/SQL" class=""> 초보자를 위한 SQL ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
         <!-- Favorite 카테고리 -->
         <span class="nav__sub-title">FAVORITES</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "FAVORITE" %}
-                        <li><a href="/categories/FAVORITE" class="">일상 ({{category[1].size}})</a></li>
+                    {% if category[0] == "FAVORITES" %}
+                        <li><a href="/categories/FAVORITES" class=""> 일상 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>

@@ -1,4 +1,4 @@
-```
+```html
 {% assign navigation = site.data.navigation[include.nav] %}
 {% assign sum = site.posts | size %}
 
