@@ -24,20 +24,27 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "etc" %}
+                        <li><a href="/categories/etc" class=""> etc ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         <!-- SQL 카테고리 -->
         <span class="nav__sub-title">SQL</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "SQL" %}
-                        <li><a href="/categories/SQL" class=""> 초보자를 위한 SQL ({{category[1].size}})</a></li>
+                        <li><a href="/categories/SQL" class=""> 200제 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
         <!-- Favorite 카테고리 -->
-        <span class="nav__sub-title">FAVORITES</span>
+        <span class="nav__sub-title">DAILY</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "FAVORITES" %}
-                        <li><a href="/categories/FAVORITES" class=""> 일상 ({{category[1].size}})</a></li>
+                    {% if category[0] == "DAILY" %}
+                        <li><a href="/categories/DAILY" class=""> 일상 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
