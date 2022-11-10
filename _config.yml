@@ -18,14 +18,14 @@ minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "n
 locale                   : "en-US"
 title                    : "yoo7477_blog"
 title_separator          : "|"
-subtitle                 : "good"
+subtitle                 : "精進"
 name                     : "유정민"
 description              : "공부하자"
 url                      : "https://yoo7477.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/background.jpg"
+logo                     : "/assets/images/free-icon-favorites-263075.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs            :  true # true, false (default)
 words_per_minute         : 200
@@ -291,7 +291,6 @@ defaults:
       comments: true # 블로그 댓글 기능 true
       share: true
       related: true
-      sidebar:
-          nav: "sidebar-category"
+      sidebar_main: true
 
 date_format: "%Y-%m-%d"

@@ -20,7 +20,7 @@
                 <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시-->
                 {% for category in site.categories %}
                     {% if category[0] == "ML" %}
-                        <li><a href="/categories/ML" class="">ML 알고리즘 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/ML" class="">ML ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -33,7 +33,7 @@
                     {% endif %}
                 {% endfor %}
         <!-- Favorite 카테고리 -->
-        <span class="nav__sub-title">FAVORITE</span>
+        <span class="nav__sub-title">FAVORITES</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "FAVORITE" %}
