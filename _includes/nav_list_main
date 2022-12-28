@@ -47,6 +47,14 @@
                         <li><a href="/categories/DAILY" class=""> 일상 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
+        <!-- Project 카테고리 -->
+                <span class="nav__sub-title">PROJECT</span>
+                    <ul>
+                        {% for category in site.categories %}
+                            {% if category[0] == "PROJECT" %}
+                                <li><a href="/categories/PROJECT" class=""> Project ({{category[1].size}})</a></li>
+                            {% endif %}
+                        {% endfor %}
             </ul>
       </li>
   </ul>
