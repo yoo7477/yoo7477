@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "yoo7477_blog"
+title                    : "Yoo"
 title_separator          : "|"
-subtitle                 :
-name                     : "유정민"
+subtitle                 : "7477"
+name                     : "Jeongmin Yoo"
 description              :
 url                      : # "https://yoo7477.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -104,18 +104,18 @@ analytics:
 
 # Site Author
 author:
-  name             : "유 정 민 "
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "精 進"
-  location         : "South Korea"
-  email            : "opqrstu12362@gmail.com"
+  name             : "Jeongmin Yoo"
+  avatar           : "/assets/images/git_profile.png"
+  bio              : "**精 進**"
+  # location         : "Republic of Korea"
+  #email            : "opqrstu12362@gmail.com"
   links:
-    - label: "opqrstu12362@gmail.com"
+    - label: "E-mail"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:opqrstu12362@gmail.com"
-    - label: "Website"
+      url: "mailto:opqrstu12362@gmail.com"
+    - label: "resume"
       icon: "fas fa-fw fa-link"
-      # url: "https://yoo7477.github.io"
+      url: "https://stupendous-stinger-3c7.notion.site/71ac19bb687b44778a7fe6056b6618bc"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
@@ -218,7 +218,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: # Asia/Seoul
 
