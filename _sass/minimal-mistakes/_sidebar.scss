@@ -32,12 +32,12 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+      max-height: calc(100vh - #{$nav-height} - 1em);
     }
   }
 
   @include breakpoint($x-large) {
-    width: calc(#{$right-sidebar-width} - 1em);
+    width: calc(#{$right-sidebar-width} - 2em);
   }
 
   > * {
@@ -52,17 +52,19 @@
   h6 {
     margin-bottom: 0;
     font-family: $sans-serif-narrow;
+
   }
 
   p,
   li {
     font-family: $sans-serif;
     font-size: $type-size-6;
-    line-height: 1.5;
+    line-height: 2;
+
   }
 
   img {
-    width: 100%;
+    width: 70%;
 
     &.emoji {
       width: 20px;
@@ -94,6 +96,7 @@
         .toc__menu {
           overflow-y: auto;
           max-height: calc(100vh - 7em);
+
         }
       }
     }
@@ -160,7 +163,7 @@
   }
 
   a {
-    color: inherit;
+    color: #0e2431;
     text-decoration: none;
   }
 }
@@ -252,6 +255,7 @@
   box-shadow: 0 2px 4px 0 rgba(#000, 0.16), 0 2px 10px 0 rgba(#000, 0.12);
   cursor: default;
 
+
   &.is--visible {
     display: block;
   }
@@ -264,6 +268,7 @@
     border: 0;
     background: transparent;
     box-shadow: none;
+
   }
 
   &:before {
@@ -295,6 +300,7 @@
     border-color: $background-color transparent;
     z-index: 1;
 
+
     @include breakpoint($large) {
       display: none;
     }
@@ -315,7 +321,7 @@
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: inherit;
+    color: #0e2431;
     font-size: $type-size-5;
     text-decoration: none;
 
