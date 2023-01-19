@@ -18,8 +18,8 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 locale                   : "en-US"
 title                    : "Yoo"
 title_separator          : "|"
-subtitle                 : "7477"
-name                     : "Jeongmin Yoo"
+subtitle                 : #
+name                     : "      Jeongmin Yoo"
 description              :
 url                      : # "https://yoo7477.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
