@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "custom" # "air", "aqua", "contrast", "dark", "dirt",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yoo"
+title                    : "In Data Science, the Best Way to Learn Is by Doing"
 title_separator          : "|"
 subtitle                 : #
 name                     : "      Jeongmin Yoo"
