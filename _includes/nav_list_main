@@ -41,14 +41,6 @@
                         <li><a href="/categories/Article" class=""> Article ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-        <!-- Favorite 카테고리 -->
-        <span class="nav__sub-title">DAILY</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "DAILY" %}
-                        <li><a href="/categories/DAILY" class=""> 일상 ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
         <!-- 파이썬 카테고리 -->
         <span class="nav__sub-title">Python</span>
         <!-- ul 태그: 서브 카테고리 -->
