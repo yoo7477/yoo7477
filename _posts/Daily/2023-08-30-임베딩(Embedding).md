@@ -43,5 +43,5 @@ OpenAI가 개발한 모델로 23년 8월 30일 기준 Hugging Face에 MTEB 리�
 [임베딩-wiki](https://namu.wiki/w/%EC%9E%84%EB%B2%A0%EB%94%A9)  
 [Text Embedding-What, Why, and How?](https://medium.com/@yu-joshua/text-embedding-what-why-and-how-13227e983ba7)  
 [OpenAI 임베딩 모델 비교](https://www.educative.io/answers/text-embedding-ada-002-vs-openais-older-embedding-models)  
-[MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
+[MTEB leaderboard](https://huggingface.co/spaces/mteb/leaderboard)  
 [한국어 임베딩, 이기창]()
