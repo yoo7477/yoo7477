@@ -32,9 +32,9 @@ use_math: true
 텍스트를 word 기반의 다수의 피처로 추출하고 이 피처에 단어 빈도수와 같은 숫자 값을 부여하면 텍스트는 단어의 조합인 벡터값으로 표현될 수 있음. 단어의 빈도수 기반 변환이 가장 기본적인 임베딩이라고 볼 수 있음. 이를 피처 벡터화(Feature Vectorization) 또는 피처 추출(Feature Extraction)이라고 함. 대표적인 방법에는 BOW(Bag of Words)와 Word2Vec 방법이 있음. 
 
 ## 4. 임베딩 종류
-a. 행렬 분해 기반: 말뭉치(Corpus) 정보가 들어 있는 원래 행렬을 두 개 이상의 작응 행렬로 쪼개는(Decomposition) 방식의 임베딩, ex) GloVe, Swivel
-b. 어떤 단어 주변에 특정 단어가 나타날지 예측하고, 이전 단어들이 주어졌을 때 다음 단어가 무엇일지 예측하거나, 문장 내 일부 단어를 지우고 해당 단어가 무엇일지 맞추는 과정에서 학습하는 방식. ex) Word2Vec, FastText, BERT, ELMo, GPT 등
-c. 주어진 문서에 잠재된 주제를 추론하는 방식 ex) LDA
+a. 행렬 분해 기반: 말뭉치(Corpus) 정보가 들어 있는 원래 행렬을 두 개 이상의 작응 행렬로 쪼개는(Decomposition) 방식의 임베딩, ex) GloVe, Swivel  
+b. 어떤 단어 주변에 특정 단어가 나타날지 예측하고, 이전 단어들이 주어졌을 때 다음 단어가 무엇일지 예측하거나, 문장 내 일부 단어를 지우고 해당 단어가 무엇일지 맞추는 과정에서 학습하는 방식. ex) Word2Vec, FastText, BERT, ELMo, GPT 등  
+c. 주어진 문서에 잠재된 주제를 추론하는 방식 ex) LDA  
 
 ## 5. 생각해보기
 ### Q1. text-embedding-ada-002이란?
