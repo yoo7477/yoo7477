@@ -27,7 +27,7 @@ use_math: true
 
 ![정의](../../assets/images/post_images/2023-09-05-(01)/figure1.png){: .align-center  width="30%" height="30%"}
 
-비용 함수는 $RSS(w_0, w_1)=1/n*\Sigma^n_{i=1}(y_i-(w_0+w_1*x_i))^2$ 이다. 이를 미분해서 미분 함수의 최솟값을 구하기 위해서는 $w_0, w_1$에 대해 편미분을 적용해야 한다. 편미분하면 다음과 같다.
+비용 함수는 $RSS(w_0, w_1)=1/n*\Sigma^n_{i=1}(y_i-(w_0+w_1*x_i))^2$ 이다. 이를 미분해서 미분 함수의 최솟값을 구하기 위해서는 $w_0, w_1$ 에 대해 편미분을 적용해야 한다. 편미분하면 다음과 같다.
 
 $\frac{\delta R(w)}{\delta w_1}=\frac{2}{N}\Sigma-x_t*(y_i-(w_0+w_1x_i))=-\frac{2}{N}\Sigma x_i*(실제값_i -예측값_i)$
 
