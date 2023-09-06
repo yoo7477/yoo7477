@@ -55,7 +55,7 @@ plt.scatter(X,y)
 ```
 
     
-![정의](../../assets/images/post_images/2023-09-05-(01)/output_0_1.png){: .align-center  width="30%" height="30%"}
+![정의](../../assets/images/post_images/2023-09-05-(01)/output_0_1.png){: .align-center  width="55%" height="55%"}
     
 
 
@@ -123,7 +123,7 @@ print('Gradient Descent Total Cost:{0:.4f}'.format(get_cost(y, y_pred)))
 plt.scatter(X,y)
 plt.plot(X, y_pred)
 ```    
-![정의](../../assets/images/post_images/2023-09-05-(01)/output_5_1.png){: .align-center  width="30%" height="30%"}
+![정의](../../assets/images/post_images/2023-09-05-(01)/output_5_1.png){: .align-center  width="55%" height="55%"}
     
 
 
