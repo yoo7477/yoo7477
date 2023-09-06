@@ -39,6 +39,93 @@ $\frac{\delta R(w)}{\delta w_0}=\frac{2}{N}\Sigma-(y_i-(w_0+w_1x_i))=-\frac{2}{N
 새로운 $w_0=이전 w_0+\eta\frac{2}{N}\Sigma (실제값_i-예측값_i)$
 
 ## 4. 파이썬 코드 구현
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+np.random.seed(0)
+# y = 4X+6을 근사(w1=4, w0=6). 임의의 값은 노이즐 위해 만듦
+
+X = 2*np.random.rand(100,1)
+y = 6 + 4 * X + np.random.randn(100,1)
+
+# 산점도 시각화
+plt.scatter(X,y)
+```
+
+    
+![정의](../../assets/images/post_images/2023-09-05-(01)/output_0_1.png){: .align-center  width="30%" height="30%"}
+    
+
+
+
+```python
+# 비용함수 정의
+def get_cost(y, y_pred):
+    cost = np.sum(np.square(y-y_pred))/N
+    return cost
+```
+
+
+```python
+# 지속해서 업데이트 되는 w1과 w0를 반환하는 함수
+def get_weight_updates(w1, w0, X, y, learning_rate=0.01):
+    N = len(y)
+    w1_update = np.zeros_like(w1)
+    w0_update = np.zeros_like(w0)
+    y_pred = np.dot(X, w1.T) + w0
+    diff = y - y_pred
+    
+    w0_factors = np.ones((N,1))
+    
+    w1_update = -(2/N)*learning_rate*(np.dot(X.T, diff))
+    w0_update = -(2/N)*learning_rate*(np.dot(w0_factors.T, diff))
+    
+    return w1_update, w0_update
+```
+
+
+```python
+# 지속해서 업데이트 되는 w1과 w0를 실제 경사하강방식으로 적용하는 함수
+def gradient_descent_steps(X, y, iters=10000):
+    w0 = np.zeros((1, 1))
+    w1 = np.zeros((1, 1))
+    
+    for ind in range(iters):
+        w1_update, w0_update = get_weight_updates(w1, w0, X, y, learning_rate=0.01)
+        w1 = w1 - w1_update
+        w0 = w0 - w0_update
+        
+    return w1, w0
+```
+
+
+```python
+# 예측 오류 계산
+def get_cost(y, y_pred):
+    N = len(y)
+    cost = np.sum(np.square(y - y_pred))/N
+    return cost
+
+w1, w0 = gradient_descent_steps(X, y, iters=1000)
+print("w1:{0:.3f} w0:{1:.3f}".format(w1[0,0], w0[0,0]))
+y_pred = w1[0, 0]*X+w0
+print('Gradient Descent Total Cost:{0:.4f}'.format(get_cost(y, y_pred)))
+```
+
+    w1:4.022 w0:6.162
+    Gradient Descent Total Cost:0.9935
+    
+
+
+```python
+plt.scatter(X,y)
+plt.plot(X, y_pred)
+```    
+![정의](../../assets/images/post_images/2023-09-05-(01)/output_5_1.png){: .align-center  width="30%" height="30%"}
+    
+
 
 
 ## 5. 생각해보기
