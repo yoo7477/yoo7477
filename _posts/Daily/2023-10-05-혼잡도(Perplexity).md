@@ -44,68 +44,9 @@ $PP(w) = 2^{H(W)} = 2^{-\frac{1}{N}log_2P(w_1,w_2,...,w_N)} = (2^{log_2P(w_1,w_2
 따라서 cross-entropy는 $E(p)=H(p,q)-\sum_ip(x_i)log_2q(x_i)$와 같이 정의된다고 볼 수 있고 여기서 p는 언어의 실제 확률 분포이나 알 수 없는 값이고 q는 test set이 아닌 training set으로 부터 추정된 확률 분포로 계산할 수 있는 것임. 그래서 단어 W의 시퀀스가 충분히 길거나 N이나 충분히 크면 우리는 각각의 단어를 Shannon-McMilan-Breiman theorem에 따라 cross-entropy를 아래와 같이 근사시킬 수 있는 것임.  
 $H(p,q)\approx-\frac{1}{N}log_2q(W)$   
 이를 다시 지수화하여 Perplexity를 cross-entropy를 활용해 정의할 수 있는 것이고, 이는 test set에 대한 loss를 계산하는 것과 동일한 것임. 
-
-
-## 4. 파이썬 코드 구현
-Iris data set으로 비교
-```python
-# Import required libraries
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.datasets import load_iris
-from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
-
-# Load the iris dataset
-iris = load_iris()
-
-# Convert data to dataframe
-iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)
-```
-Original data set
-```python
-# Visualize the original data
-plt.scatter(iris_df['sepal length (cm)'], iris_df['sepal width (cm)'], c=iris.target)
-plt.xlabel('sepal length (cm)')
-plt.ylabel('sepal width (cm)')
-plt.title('Iris Dataset')
-plt.show()
-```
-![정의](../../assets/images/post_images/2023-09-25-(01)/Figure_1.png){: .align-center  width="30%" height="30%"}
-
-Apply PCA
-```python
-# Apply PCA
-pca = PCA(n_components=2)
-iris_pca = pca.fit_transform(iris.data)
-
-# Visualize PCA output
-plt.scatter(iris_pca[:,0], iris_pca[:,1], c=iris.target)
-plt.xlabel('PC 1')
-plt.ylabel('PC 2')
-plt.title('PCA Output')
-plt.show()
-```
-![정의](../../assets/images/post_images/2023-09-25-(01)/Figure_2.png){: .align-center  width="30%" height="30%"}
-Apply t-SNE
-
-```python
-# Apply t-SNE
-tsne = TSNE(n_components=2)
-iris_tsne = tsne.fit_transform(iris.data)
-
-# Visualize t-SNE output
-plt.scatter(iris_tsne[:,0], iris_tsne[:,1], c=iris.target)
-plt.xlabel('t-SNE 1')
-plt.ylabel('t-SNE 2')
-plt.title('t-SNE Output')
-plt.show()
-```
-![정의](../../assets/images/post_images/2023-09-25-(01)/Figure_3.png){: .align-center  width="30%" height="30%"}
-
+(여러 게시물에는 cross-entropy의 log가 상용로그도 쓰고 자연로그도 쓰는데 다 틀렸고 밑이 2인 log를 써야하니 명심할 것......)
 
 ## 5. 생각해보기
-
+아이고 생각이고 뭐고 생각보다 간단한 내용인데 하기가 싫었는지 글을 읽어도 이해도 안되고 진도도 너무 안나가서 고생이 많았다. 추가로 궁금한 내용이 있거나 다른 공부하면서 추가적으로 생기면 추가하도록 하자......
 ## 참고
 [Perplexity 관련 best post](https://towardsdatascience.com/perplexity-in-lan%20tguage-models-87a196019a94)  
