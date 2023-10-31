@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://yoo7477.github.io/sitemap.xml
+Sitemap: https://yoo7477.github.io/
