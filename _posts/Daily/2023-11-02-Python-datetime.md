@@ -26,6 +26,7 @@ use_math: true
 - .replace(필수 인자=25)로 날짜 변환함.
 - .weekday()로 요일을 숫자로 출력함. (월요일은 0 일요일은 6)
 - .ctime()으로 날짜를 문자로 출력함. 
+  
 ```python 
 import datetinme
 
@@ -54,7 +55,7 @@ datetime.date(2023, 11, 2).ctime()
   - 주로 문자로 된 날짜 열을 데이터 프레임의 인덱스로 넣기 위해 변환할 때 사용할 것 같음.
 - .strftime()은 주어진 포맷에 따라 객체를 문자열로 변환함.
   - 말 그대로 내가 원하는 문자열로 변환할 때 사용할듯.
-- 
+  
 ```python 
 import datetinme
 
@@ -73,7 +74,6 @@ datetime.datetime.strptime("21/11/06 16:30", "%d/%m/%y %H:%M")
 
 datetime.datetime.now().strftime("%d/%m/%y %H:%M")
 # '02/11/23 11:35'
-
 ```
 
 ## 4. datetime.timedelta 객체 
@@ -94,10 +94,9 @@ datetime.timedelta(days=1).total_seconds()
 
 datetime.timedelta(days=1)/datetime.timedelta(seconds=1)
 # 86400.0
-
 ```
+
 ## 참고
 - 이제 구글링 안해도 될 듯!
-- 
 
   
